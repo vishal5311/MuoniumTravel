@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #1A1A1A;
+    --primary: #1FB4B4;
+    --dark: #1A1A1A;
+    --light: #FFFFFF;
+  }
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-dark: var(--dark);
+  --color-light: var(--light);
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --letter-spacing-luxury: 0.2em;
+  --letter-spacing-wide-luxury: 0.3em;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.text-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: var(--letter-spacing-luxury);
+  text-transform: uppercase;
+}
+
+canvas {
+  display: block;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
